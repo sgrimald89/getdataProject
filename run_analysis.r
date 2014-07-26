@@ -31,7 +31,7 @@ if(!file.exists("UCI HAR Dataset")){
         names(allX)<-features$V2
         
         relevantVariables<-c(grep("mean()",features$V2,fixed=TRUE), grep("std()",features$V2,fixed=TRUE))
-        
+        VariablesCodebook<-features[relevantVariables,2]
         finalX<-allX[,relevantVariables]
         #combines the subject data the activity data and the features
         fulldata<-cbind(allSubjects,allY,finalX)
@@ -46,4 +46,5 @@ if(!file.exists("UCI HAR Dataset")){
         #deletes unnecearry new columns
         aggdata<-aggdata[,-c(3,4)]
         #outputs the table with the averages
-        write.table(aggdata,"TidyData.txt")
+        write.table(aggdata,"TidyData.txt",quote=FALSE, row.names=FALSE)
+        write.table(VariablesCodebook,"Codebook.txt",quote=FALSE, row.names=FALSE)
