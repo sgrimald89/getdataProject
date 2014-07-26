@@ -1,8 +1,13 @@
-Activity- Describes Activity which Subject participated in
+#Codebook
+__________________
 
-Subject- An identifier that ranges from 1 to 30 that represents each Subject.
+###The following are variables that did not come from the "X" test or training data sets.
 
-The following variables are all the variables that contained “mean()” or “std()”. They are all averaged for each combination of Activity and Subject. Because the original variables were normalized to 1, they are unit less.
+Activity- Describes Activity which Subject participated in. This data was contained in y_train and y_test
+
+Subject- An identifier that ranges from 1 to 30 that represents each Subject. This data was contained in subject_train and subject_test
+
+###The following variables are all the variables that contained “mean()” or “std()”. They are all averaged for each combination of Activity and Subject. Because the original variables were normalized to 1, they are unit less.
 
 tBodyAcc-mean()-X
 tBodyAcc-mean()-Y
